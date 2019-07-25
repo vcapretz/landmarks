@@ -23,6 +23,7 @@
 		D59DAE9222E99A2C00707F43 /* GraphCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DAE9122E99A2C00707F43 /* GraphCapsule.swift */; };
 		D59DAE9422E9A7E400707F43 /* HikeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DAE9322E9A7E400707F43 /* HikeGraph.swift */; };
 		D59DAE9622E9AC8200707F43 /* hikeData.json in Resources */ = {isa = PBXBuildFile; fileRef = D59DAE9522E9AC8200707F43 /* hikeData.json */; };
+		D5A076CE22E9C9C2006B4EC7 /* HikeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A076CD22E9C9C2006B4EC7 /* HikeDetail.swift */; };
 		D5E73FCE22E8804A00FC018E /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E73FCD22E8804A00FC018E /* LandmarkList.swift */; };
 		D5EBB4F822E89844007314B2 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = D5EBB4EB22E89844007314B2 /* landmarkData.json */; };
 		D5EBB4F922E89844007314B2 /* icybay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5EBB4EC22E89844007314B2 /* icybay.jpg */; };
@@ -64,6 +65,7 @@
 		D59DAE9122E99A2C00707F43 /* GraphCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GraphCapsule.swift; path = "../../../../../../System/Volumes/Data/Users/vitor.capretz/Developer/Landmarks/Landmarks/Supporting Views/GraphCapsule.swift"; sourceTree = "<group>"; };
 		D59DAE9322E9A7E400707F43 /* HikeGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HikeGraph.swift; path = "../../../../../../System/Volumes/Data/Users/vitor.capretz/Developer/Landmarks/Landmarks/Supporting Views/HikeGraph.swift"; sourceTree = "<group>"; };
 		D59DAE9522E9AC8200707F43 /* hikeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hikeData.json; sourceTree = "<group>"; };
+		D5A076CD22E9C9C2006B4EC7 /* HikeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HikeDetail.swift; path = ../../../../../System/Volumes/Data/Users/vitor.capretz/Developer/Landmarks/Landmarks/HikeDetail.swift; sourceTree = "<group>"; };
 		D5E73FCD22E8804A00FC018E /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandmarkList.swift; path = ../../../../../System/Volumes/Data/Users/vitor.capretz/Developer/Landmarks/Landmarks/LandmarkList.swift; sourceTree = "<group>"; };
 		D5EBB4EB22E89844007314B2 /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 		D5EBB4EC22E89844007314B2 /* icybay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icybay.jpg; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				D59DAE8E22E999BA00707F43 /* Supporting Views */,
 				D5E73FCD22E8804A00FC018E /* LandmarkList.swift */,
 				D59DAE8622E9974C00707F43 /* HikeView.swift */,
+				D5A076CD22E9C9C2006B4EC7 /* HikeDetail.swift */,
 				D50D6D4022E75A0800C7D828 /* Assets.xcassets */,
 				D50D6D4522E75A0800C7D828 /* LaunchScreen.storyboard */,
 				D50D6D4822E75A0800C7D828 /* Info.plist */,
@@ -301,6 +304,7 @@
 				D5EBB50622E89E80007314B2 /* UserData.swift in Sources */,
 				D5EBB50C22E8F7A0007314B2 /* Badge.swift in Sources */,
 				D50D6D3F22E75A0700C7D828 /* LandmarkDetail.swift in Sources */,
+				D5A076CE22E9C9C2006B4EC7 /* HikeDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

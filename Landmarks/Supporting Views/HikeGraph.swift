@@ -10,11 +10,11 @@ import SwiftUI
 
 func rangeOfRanges<C: Collection>(_ ranges: C) -> Range<Double>
     where C.Element == Range<Double> {
-        guard !ranges.isEmpty else { return 0..<0 }
-        let low = ranges.lazy.map { $0.lowerBound }.min()!
-        let high = ranges.lazy.map { $0.upperBound }.max()!
-        
-        return low..<high
+    guard !ranges.isEmpty else { return 0..<0 }
+    let low = ranges.lazy.map { $0.lowerBound }.min()!
+    let high = ranges.lazy.map { $0.upperBound }.max()!
+
+    return low..<high
 }
 
 func magnitude(of range: Range<Double>) -> Double {
@@ -43,19 +43,19 @@ struct HikeGraph: View {
         let data = hike.observations
         let overallRange = rangeOfRanges(data.lazy.map { $0[keyPath: self.path] })
         let maxMagnitude = data.map { magnitude(of: $0[keyPath: path]) }.max()!
-        let heightRadio = 1 - Length(maxMagnitude / magnitude(of: overallRange))
-        
+        let heightRatio = 1 - Length(maxMagnitude / magnitude(of: overallRange))
+
         return GeometryReader { proxy in
-            HStack(alignment: .bottom, spacing: proxy.size.width / 10) {
+            HStack(alignment: .bottom, spacing: proxy.size.width / 120) {
                 ForEach(data.indices) { index in
                     GraphCapsule(
                         index: index,
                         height: proxy.size.height,
                         range: data[index][keyPath: self.path],
-                        overallRange: overallRange
-                    )
+                        overallRange: overallRange)
+                    .colorMultiply(self.color)
                 }
-                .offset(x: 0, y: proxy.size.height * heightRadio)
+                .offset(x: 0, y: proxy.size.height * heightRatio)
             }
         }
     }
@@ -67,10 +67,8 @@ struct HikeGraph_Previews: PreviewProvider {
         Group {
             HikeGraph(hike: hikeData[0], path: \.elevation)
                 .frame(height: 200)
-            
             HikeGraph(hike: hikeData[0], path: \.heartRate)
                 .frame(height: 200)
-            
             HikeGraph(hike: hikeData[0], path: \.pace)
                 .frame(height: 200)
         }
